@@ -14,7 +14,7 @@ let colorStates = {
 // Without JavaScript, clicking on these heart shapes does nothing. Uncomment
 // this code and refresh the demo page.
 
-// let articleHearts = document.querySelectorAll(".like");
+let articleHearts = document.querySelectorAll(".like");
 
 function likeCallback(e) {
   let heart = e.target;
@@ -25,9 +25,9 @@ function likeCallback(e) {
       // mimic Pillar 3 (Server Communication) to only update the screen if the
       // sending of information to the server succeeds.
       alert("You notified the server!");
-      // alert(serverMessage);
-      // heart.innerText = glyphStates[heart.innerText];
-      // heart.style.color = colorStates[heart.style.color];
+      alert(serverMessage);
+      heart.innerText = glyphStates[heart.innerText];
+      heart.style.color = colorStates[heart.style.color];
     })
     .catch(function(error) {
       alert("Something went wrong!");
@@ -43,7 +43,7 @@ function likeCallback(e) {
   //glyph.addEventListener("click", likeCallback);
 //}
 
-// STEP 4: 
+// STEP 4:
 
 // When all the STEPs' code changes have been complete, you'll be able to see a
 // working demonstration of our reference example. Sure, it's maybe not as
